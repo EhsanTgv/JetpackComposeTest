@@ -3,6 +3,7 @@ package com.example.jetpackcomposetest
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             JetpackComposeTestTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    ColumnExample()
+                    RowExample()
                 }
             }
         }
@@ -33,6 +34,14 @@ fun Greeting(name: String) {
 @Composable
 fun ColumnExample() {
     Column {
+        Text("Hello World!")
+        Text("Hello World!2")
+    }
+}
+
+@Composable
+fun RowExample() {
+    Row {
         Text("Hello World!")
         Text("Hello World!2")
     }
